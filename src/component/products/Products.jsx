@@ -5,6 +5,27 @@
   import { useWishlist } from "../context/useWishlist";
   import { useCart } from "../context/useCart";
   import { useSearch } from "../context/useSearch";
+  
+  // Import all shoe images
+  import shoe1 from "../../assets/zynshoes/shoe1.jpg";
+  import shoe3 from "../../assets/zynshoes/shoe3.jpg";
+  import shoe4 from "../../assets/zynshoes/shoe4.jpg";
+  import shoe5 from "../../assets/zynshoes/shoe5.jpg";
+  import shoe6 from "../../assets/zynshoes/shoe6.jpg";
+  import shoe7 from "../../assets/zynshoes/shoe7.jpg";
+  import shoe8 from "../../assets/zynshoes/shoe8.jpg";
+  import shoe9 from "../../assets/zynshoes/shoe9.jpg";
+  import shoe10 from "../../assets/zynshoes/shoe10.jpg";
+  import shoe11 from "../../assets/zynshoes/shoe11.jpg";
+  import shoe12 from "../../assets/zynshoes/shoe12.jpg";
+  import shoe13 from "../../assets/zynshoes/shoe13.jpg";
+  import shoe14 from "../../assets/zynshoes/shoe14.jpg";
+  import shoe15 from "../../assets/zynshoes/shoe15.jpg";
+  import shoe16 from "../../assets/zynshoes/shoe16.jpg";
+  import shoe17 from "../../assets/zynshoes/shoe17.jpg";
+  import shoe111 from "../../assets/zynshoes/shoe111.png";
+  import shoee2 from "../../assets/zynshoes/shoee2.jpg";
+  import zynshoe from "../../assets/zynshoes/zynshoe.jpg";
   const Products = () => {
     const[limits, setLimits] = useState(8);
     const [selectedCategory, setSelectedCategory] = useState('All');
@@ -16,176 +37,213 @@
     const productcards = [
       {
         id: 1,
-        image:
-          "https://i.pinimg.com/736x/2a/25/46/2a25463b691968413766eb1e1aa9d0a9.jpg",
-        title: "sam Nero-Grigio",
-        artical: "Artical 90184",
-        price: "$2400",
+        image: shoe1,
+        title: "ZYN Classic Brown",
+        artical: "Article ZYN001",
+        price: "$189",
         category: "Shoes",
         new: true,
         persent: false,
+        description: "Premium leather classic brown shoes with comfortable sole"
       },
       {
         id: 2,
-        image:
-          "https://i.pinimg.com/736x/b0/27/3a/b0273a493df3f6b66ea6ef63e96eff4d.jpg",
-        title: "Wooden shoe",
-        artical: "Artical 90184",
-        price: "$2003",
+        image: shoee2,
+        title: "ZYN Sport Elite",
+        artical: "Article ZYN002",
+        price: "$225",
         category: "Shoes",
         new: false,
         persent: true,
+        description: "High-performance athletic shoes for active lifestyle"
       },
       {
         id: 3,
-        image:
-          "https://i.pinimg.com/736x/19/09/f4/1909f4a47046f00ff6a8619143330a1b.jpg",
-        title: "sam Nero-Grigio",
-        artical: "Artical 90184",
-        price: "$2400",
+        image: shoe3,
+        title: "ZYN Urban Style",
+        artical: "Article ZYN003",
+        price: "$165",
+        category: "Shoes",
         new: false,
         persent: false,
+        description: "Modern urban design with superior comfort"
       },
       {
         id: 4,
-        image:
-          "https://i.pinimg.com/736x/f3/b5/76/f3b576c8eeeb329ee383fa610021fcef.jpg",
-        title: "Wooden shoes",
-        artical: "Artical 90184",
-        price: "$2400",
+        image: shoe4,
+        title: "ZYN Professional",
+        artical: "Article ZYN004",
+        price: "$275",
+        category: "Shoes",
         new: false,
         persent: true,
+        description: "Elegant professional shoes for business occasions"
       },
       {
         id: 5,
-        image:
-          "https://i.pinimg.com/1200x/98/d1/9b/98d19b753c86339f1225fde95694a04a.jpg",
-        title: "sam Nero-Grigio",
-        artical: "Artical 90184",
-        price: "$2400",
+        image: shoe5,
+        title: "ZYN Casual Comfort",
+        artical: "Article ZYN005",
+        price: "$145",
+        category: "Shoes",
         new: true,
         persent: false,
+        description: "Comfortable casual shoes for everyday wear"
       },
       {
         id: 6,
-        image:
-          "https://i.pinimg.com/736x/13/61/14/136114b1f4f231a692442ad784463e24.jpg",
-        title: "Wooden shoes",
-        artical: "Artical 90184",
-        price: "$2400",
+        image: shoe6,
+        title: "ZYN Adventure",
+        artical: "Article ZYN006",
+        price: "$195",
+        category: "Shoes",
         new: true,
         persent: false,
+        description: "Durable outdoor shoes for adventure enthusiasts"
       },
       {
         id: 7,
-        image:
-          "https://i.pinimg.com/1200x/6c/ca/0d/6cca0d1be94d1e5efdd690dae5ada8c2.jpg",
-        title: "sam Nero-Grigio",
-        artical: "Artical 90184",
-        price: "$2400",
+        image: shoe7,
+        title: "ZYN Luxury Edition",
+        artical: "Article ZYN007",
+        price: "$320",
+        category: "Shoes",
         new: false,
         persent: true,
+        description: "Premium luxury shoes with handcrafted details"
       },
       {
         id: 8,
-        image:
-          "https://i.pinimg.com/736x/68/44/f9/6844f924902800b4b7d0f17f4439d2a6.jpg",
-        title: "Wooden shoes",
-        artical: "Artical 90184",
-        price: "$2400",
+        image: shoe8,
+        title: "ZYN Street Walker",
+        artical: "Article ZYN008",
+        price: "$155",
+        category: "Shoes",
         new: false,
         persent: false,
+        description: "Stylish street shoes with modern design"
       },
       {
         id: 9,
-        image:
-          "https://i.pinimg.com/1200x/2a/c2/8d/2ac28dd555326f60d02d9328f6609b17.jpg",
-        title: "Wooden shoes",
-        artical: "Artical 90184",
-        price: "$2400",
+        image: shoe9,
+        title: "ZYN Executive",
+        artical: "Article ZYN009",
+        price: "$285",
+        category: "Shoes",
         new: true,
         persent: false,
+        description: "Executive level shoes for corporate professionals"
       },
       {
         id: 10,
-        image:
-          "https://i.pinimg.com/736x/13/61/14/136114b1f4f231a692442ad784463e24.jpg",
-        title: "Wooden shoes",
-        artical: "Artical 90184",
-        price: "$2400",
+        image: shoe10,
+        title: "ZYN Trendsetter",
+        artical: "Article ZYN010",
+        price: "$175",
+        category: "Shoes",
         new: true,
         persent: false,
+        description: "Trendy shoes that set fashion standards"
       },
       {
         id: 11,
-        image:
-          "https://i.pinimg.com/1200x/e9/de/0a/e9de0a0d5bd6779bd38c19e75f8a9baf.jpg",
-        title: "Wooden shoes",
-        artical: "Artical 90184",
-        price: "$2400",
+        image: shoe11,
+        title: "ZYN Heritage",
+        artical: "Article ZYN011",
+        price: "$245",
+        category: "Shoes",
         new: false,
         persent: true,
+        description: "Classic heritage design with modern comfort"
       },
       {
         id: 12,
-        image:
-          "https://i.pinimg.com/1200x/e8/67/9d/e8679d716f8e0b095972c446cc3a6176.jpg",
-        title: "Wooden shoes",
-        artical: "Artical 90184",
-        price: "$2400",
+        image: shoe12,
+        title: "ZYN Performance",
+        artical: "Article ZYN012",
+        price: "$205",
+        category: "Shoes",
         new: true,
         persent: false,
+        description: "High-performance shoes for active individuals"
       },
       {
         id: 13,
-        image:
-          "https://i.pinimg.com/736x/dd/e1/5d/dde15dda36c022b5485ec27744b0b787.jpg",
-        title: "Wooden shoes",
-        artical: "Artical 90184",
-        price: "$2400",
+        image: shoe13,
+        title: "ZYN Signature",
+        artical: "Article ZYN013",
+        price: "$295",
+        category: "Shoes",
         new: true,
         persent: false,
+        description: "Signature collection with unique design elements"
       },
       {
         id: 14,
-        image:
-          "https://i.pinimg.com/1200x/7b/67/95/7b6795274371ebc5717b02c1e686b66c.jpg",
-        title: "Wooden shoes",
-        artical: "Artical 90184",
-        price: "$2400",
+        image: shoe14,
+        title: "ZYN Comfort Plus",
+        artical: "Article ZYN014",
+        price: "$135",
+        category: "Shoes",
         new: false,
         persent: true,
+        description: "Extra comfortable shoes with cushioned sole"
       },
       {
         id: 15,
-        image:
-          "https://i.pinimg.com/736x/b1/91/07/b1910716b328a6e17bdda01b4e40bbed.jpg",
-        title: "Wooden shoes",
-        artical: "Artical 90184",
-        price: "$2400",
+        image: shoe15,
+        title: "ZYN Elite Runner",
+        artical: "Article ZYN015",
+        price: "$215",
+        category: "Shoes",
         new: false,
         persent: false,
+        description: "Professional running shoes with advanced technology"
       },
       {
         id: 16,
-        image:
-          "https://i.pinimg.com/1200x/a1/84/41/a18441b327f69991569f262f7c3bd12f.jpg",
-        title: "Wooden shoes",
-        artical: "Artical 90184",
-        price: "$2400",
+        image: shoe16,
+        title: "ZYN Fashion Forward",
+        artical: "Article ZYN016",
+        price: "$185",
+        category: "Shoes",
         new: false,
         persent: true,
+        description: "Fashion-forward design with contemporary appeal"
       },
       {
         id: 17,
-        image:
-          "https://i.pinimg.com/736x/dc/9e/82/dc9e827891b352117dd2679e27e9b1cf.jpg",
-        title: "Wooden shoes",
-        artical: "Artical 90184",
-        price: "$2400",
+        image: shoe17,
+        title: "ZYN Classic White",
+        artical: "Article ZYN017",
+        price: "$165",
+        category: "Shoes",
         new: false,
         persent: true,
+        description: "Clean white design perfect for any occasion"
       },
+      {
+        id: 18,
+        image: shoe111,
+        title: "ZYN Premium Collection",
+        artical: "Article ZYN018",
+        price: "$350",
+        category: "Shoes",
+        new: true,
+        persent: false,
+        description: "Premium collection with exclusive materials"
+      },
+      {
+        id: 19,
+        image: zynshoe,
+        title: "ZYN Original",
+        artical: "Article ZYN019",
+        price: "$199",
+        category: "Shoes",
+        new: true,
+        persent: false,
+        description: "Original ZYN design that started it all"
+      }
     ];
     
   let filteredProducts = productcards.filter(product =>

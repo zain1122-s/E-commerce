@@ -29,8 +29,8 @@ const Signin = () => {
       <div className="signin-left">
         <div className="left-name">
           <img src={image} className="img" />
-          <h1>DEVICH</h1>
-          <p>Holzschuherzeugung</p>
+          <h1>ZYN</h1>
+          <p>stylooo</p>
         </div>
       </div>
       <div className="signin-right">

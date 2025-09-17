@@ -5,9 +5,9 @@ const Footer = () => {
     <div className="footer-container">
       <div className="upper-footer">
         <div className="box1">
-          <h1>Devich.</h1>
+          <h1>ZYN.</h1>
           <p>
-            Devich Holzschuherzeugung GmbH <br />
+            ZYN stylooo GmbH <br />
             Basen 592 <br />
             6952 Hittisau <br />
             Austria
@@ -41,7 +41,7 @@ const Footer = () => {
       </div>
       <div className="lower-footer">
         <div className="line"></div>
-        <p>2025 Devich. All right reserved </p>
+        <p>2025 ZYN. All right reserved </p>
       </div>
     </div>
   );

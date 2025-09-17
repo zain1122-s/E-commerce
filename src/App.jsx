@@ -3,6 +3,8 @@ import Signin from "./component/signin/Signin";
 import Homepage from "./component/homepage/Homepage";
 import { Routes, Route } from "react-router-dom";
 import Productdetail from "./component/Productdetail/Productdetail";
+import Products from "./component/products/Products";
+import Shop from "./component/shop/Shop";
 import Layout from "./component/layout/Layout";
 import Cart from "./component/cart/Cart";
 import { CardProvider } from "./component/context/CardContext";
@@ -22,6 +24,7 @@ const App = () => {
               <Routes>
                 <Route path="/" element={<Signin />} />
                 <Route path="/home" element={<Layout><Homepage /></Layout>} />
+                <Route path="/shop" element={<Layout><Shop /></Layout>} />
                 <Route path="products/:id" element={<Layout><Productdetail /></Layout>} />
                 <Route path="/cart" element={<Layout><Cart /></Layout>} />
                 <Route path="/about" element={<Layout><About /></Layout>} />

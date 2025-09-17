@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className={`navbar-content ${menuOpen ? "open":""  }`}>
 
           <Link to="/home">Home</Link>
-          <a href="#shop">Shop</a>
+          <Link to="/shop">Shop</Link>
           <a href="#accessories">Accessories</a>
           <a href="#coupen">Coupen</a>
           <Link to="/about">About</Link>
