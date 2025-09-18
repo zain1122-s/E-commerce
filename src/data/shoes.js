@@ -1,0 +1,513 @@
+import shoe1 from "../assets/zynshoes/shoe1.jpg";
+import shoe3 from "../assets/zynshoes/shoe3.jpg";
+import shoe4 from "../assets/zynshoes/shoe4.jpg";
+import shoe5 from "../assets/zynshoes/shoe5.jpg";
+import shoe6 from "../assets/zynshoes/shoe6.jpg";
+import shoe7 from "../assets/zynshoes/shoe7.jpg";
+import shoe8 from "../assets/zynshoes/shoe8.jpg";
+import shoe9 from "../assets/zynshoes/shoe9.jpg";
+import shoe10 from "../assets/zynshoes/shoe10.jpg";
+import shoe11 from "../assets/zynshoes/shoe11.jpg";
+import shoe12 from "../assets/zynshoes/shoe12.jpg";
+import shoe13 from "../assets/zynshoes/shoe13.jpg";
+import shoe14 from "../assets/zynshoes/shoe14.jpg";
+import shoe15 from "../assets/zynshoes/shoe15.jpg";
+import shoe16 from "../assets/zynshoes/shoe16.jpg";
+import shoe17 from "../assets/zynshoes/shoe17.jpg";
+import shoe111 from "../assets/zynshoes/shoe111.png";
+import shoee2 from "../assets/zynshoes/shoee2.jpg";
+import zynshoe from "../assets/zynshoes/zynshoe.jpg";
+import aboutimg from "../assets/zynshoes/aboutimg.jpg";
+import adidas1 from "../assets/zynshoes/adidas1.png";
+import adidas2 from "../assets/zynshoes/adidas2.png";
+import adidas3 from "../assets/zynshoes/adidas3.webp";
+import adidas4 from "../assets/zynshoes/adidas4.png";
+import adidas5 from "../assets/zynshoes/adidas5.png";
+import nik1 from "../assets/zynshoes/nik1.png";
+import nik2 from "../assets/zynshoes/nik2.png";
+import nik3 from "../assets/zynshoes/nik3.png";
+import nik4 from "../assets/zynshoes/nik4.png";
+import nike1j from "../assets/zynshoes/nike1.jpg";
+import nike1p from "../assets/zynshoes/nike1.png";
+import nike2 from "../assets/zynshoes/nike2.png";
+import nike3j from "../assets/zynshoes/nike3.jpeg";
+import nike3p from "../assets/zynshoes/nike3.png";
+import nike4 from "../assets/zynshoes/nike4.png";
+import nikke2 from "../assets/zynshoes/nikke2.jpeg";
+import she1 from "../assets/zynshoes/she1.jpg";
+import she2 from "../assets/zynshoes/she2.webp";
+import sho1 from "../assets/zynshoes/sho1.jpg";
+import sho2 from "../assets/zynshoes/sho2.jpg";
+import sho3 from "../assets/zynshoes/sho3.jpg";
+import sho4 from "../assets/zynshoes/sho4.jpg";
+import sho5 from "../assets/zynshoes/sho5.jpg";
+import shu1 from "../assets/zynshoes/shu1.jpg";
+import shu7 from "../assets/zynshoes/shu7.jpg";
+
+const shoeCollection = [
+  {
+    id: 1,
+    image: shoe1,
+    images: [shoe1, shoe3, shoe4, shoe5, shoe6],
+    title: "ZYN Classic Brown Leather",
+    category: "Formal",
+    price: 189,
+    originalPrice: 249,
+    sizes: ["7", "8", "9", "10", "11", "12"],
+    colors: ["Brown", "Black"],
+    material: "Genuine Leather",
+    description: "Premium handcrafted leather shoes perfect for formal occasions and business meetings.",
+    features: ["Genuine Leather", "Comfortable Sole", "Handcrafted", "Durable"],
+    rating: 4.8,
+    reviews: 124,
+    inStock: true,
+    isNew: true,
+    discount: 24,
+    artical: "Article ZYN001",
+    new: true,
+    persent: false
+  },
+  {
+    id: 2,
+    image: shoee2,
+    images: [shoee2, shoe7, shoe8, shoe9, shoe10],
+    title: "ZYN Sport Elite Runner",
+    category: "Athletic",
+    price: 225,
+    originalPrice: 275,
+    sizes: ["6", "7", "8", "9", "10", "11", "12"],
+    colors: ["White", "Black", "Blue"],
+    material: "Mesh & Synthetic",
+    description: "High-performance running shoes with advanced cushioning technology for athletes.",
+    features: ["Breathable Mesh", "Shock Absorption", "Lightweight", "Anti-Slip"],
+    rating: 4.9,
+    reviews: 89,
+    inStock: true,
+    isNew: false,
+    discount: 18
+  },
+  {
+    id: 3,
+    image: shoe3,
+    images: [shoe3, shoe11, shoe12, shoe13, shoe14],
+    title: "ZYN Urban Casual",
+    category: "Casual",
+    price: 165,
+    originalPrice: 195,
+    sizes: ["7", "8", "9", "10", "11"],
+    colors: ["Grey", "Navy", "Brown"],
+    material: "Canvas & Leather",
+    description: "Modern urban design combining comfort and style for everyday wear.",
+    features: ["Canvas Upper", "Leather Accents", "Flexible Sole", "Stylish"],
+    rating: 4.6,
+    reviews: 156,
+    inStock: true,
+    isNew: false,
+    discount: 15
+  },
+  {
+    id: 4,
+    image: shoe4,
+    title: "ZYN Professional Oxford",
+    category: "Formal",
+    price: 275,
+    originalPrice: 325,
+    sizes: ["8", "9", "10", "11", "12"],
+    colors: ["Black", "Brown", "Burgundy"],
+    material: "Premium Leather",
+    description: "Elegant Oxford shoes crafted for business professionals and formal events.",
+    features: ["Oxford Style", "Premium Leather", "Classic Design", "Professional"],
+    rating: 4.7,
+    reviews: 78,
+    inStock: true,
+    isNew: true,
+    discount: 15
+  },
+  {
+    id: 5,
+    image: shoe5,
+    title: "ZYN Comfort Walker",
+    category: "Casual",
+    price: 145,
+    originalPrice: 175,
+    sizes: ["6", "7", "8", "9", "10", "11"],
+    colors: ["Beige", "Brown", "Black"],
+    material: "Soft Leather",
+    description: "Ultra-comfortable walking shoes designed for all-day comfort and support.",
+    features: ["Memory Foam", "Arch Support", "Breathable", "Lightweight"],
+    rating: 4.5,
+    reviews: 203,
+    inStock: true,
+    isNew: false,
+    discount: 17
+  },
+  {
+    id: 6,
+    image: shoe6,
+    title: "ZYN Adventure Hiking",
+    category: "Outdoor",
+    price: 195,
+    originalPrice: 235,
+    sizes: ["7", "8", "9", "10", "11", "12"],
+    colors: ["Brown", "Green", "Black"],
+    material: "Waterproof Leather",
+    description: "Durable hiking boots built for outdoor adventures and challenging terrains.",
+    features: ["Waterproof", "Ankle Support", "Grip Sole", "Durable"],
+    rating: 4.8,
+    reviews: 67,
+    inStock: true,
+    isNew: true,
+    discount: 17
+  },
+  {
+    id: 7,
+    image: shoe7,
+    title: "ZYN Luxury Edition",
+    category: "Luxury",
+    price: 320,
+    originalPrice: 399,
+    sizes: ["8", "9", "10", "11", "12"],
+    colors: ["Black", "Brown", "Tan"],
+    material: "Italian Leather",
+    description: "Handcrafted luxury shoes made from finest Italian leather with premium details.",
+    features: ["Italian Leather", "Handcrafted", "Luxury Design", "Premium Quality"],
+    rating: 4.9,
+    reviews: 45,
+    inStock: true,
+    isNew: true,
+    discount: 20
+  },
+  {
+    id: 8,
+    image: shoe8,
+    title: "ZYN Street Style",
+    category: "Casual",
+    price: 155,
+    originalPrice: 185,
+    sizes: ["6", "7", "8", "9", "10", "11"],
+    colors: ["White", "Black", "Grey"],
+    material: "Synthetic & Mesh",
+    description: "Trendy street-style sneakers perfect for casual outings and urban lifestyle.",
+    features: ["Street Style", "Comfortable", "Trendy Design", "Versatile"],
+    rating: 4.4,
+    reviews: 134,
+    inStock: true,
+    isNew: false,
+    discount: 16
+  },
+  {
+    id: 9,
+    image: shoe9,
+    title: "ZYN Executive Loafer",
+    category: "Formal",
+    price: 285,
+    originalPrice: 340,
+    sizes: ["8", "9", "10", "11", "12"],
+    colors: ["Black", "Brown", "Navy"],
+    material: "Premium Leather",
+    description: "Sophisticated loafers designed for executives and business professionals.",
+    features: ["Slip-On Design", "Premium Leather", "Executive Style", "Comfortable"],
+    rating: 4.7,
+    reviews: 92,
+    inStock: true,
+    isNew: false,
+    discount: 16
+  },
+  {
+    id: 10,
+    image: shoe10,
+    title: "ZYN Fashion Forward",
+    category: "Fashion",
+    price: 175,
+    originalPrice: 210,
+    sizes: ["6", "7", "8", "9", "10", "11"],
+    colors: ["Red", "Blue", "Black"],
+    material: "Synthetic Leather",
+    description: "Fashion-forward design with contemporary appeal for style-conscious individuals.",
+    features: ["Fashion Design", "Contemporary", "Stylish", "Eye-catching"],
+    rating: 4.3,
+    reviews: 167,
+    inStock: true,
+    isNew: true,
+    discount: 17
+  },
+  {
+    id: 11,
+    image: shoe11,
+    title: "ZYN Heritage Classic",
+    category: "Classic",
+    price: 245,
+    originalPrice: 295,
+    sizes: ["7", "8", "9", "10", "11", "12"],
+    colors: ["Brown", "Black", "Tan"],
+    material: "Full Grain Leather",
+    description: "Classic heritage design combining traditional craftsmanship with modern comfort.",
+    features: ["Heritage Design", "Full Grain Leather", "Traditional Craft", "Timeless"],
+    rating: 4.8,
+    reviews: 88,
+    inStock: true,
+    isNew: false,
+    discount: 17
+  },
+  {
+    id: 12,
+    image: shoe12,
+    title: "ZYN Performance Pro",
+    category: "Athletic",
+    price: 205,
+    originalPrice: 245,
+    sizes: ["6", "7", "8", "9", "10", "11", "12"],
+    colors: ["Black", "White", "Blue"],
+    material: "Performance Mesh",
+    description: "High-performance athletic shoes engineered for serious athletes and fitness enthusiasts.",
+    features: ["Performance Mesh", "Energy Return", "Stability", "Professional"],
+    rating: 4.6,
+    reviews: 112,
+    inStock: true,
+    isNew: true,
+    discount: 16
+  },
+  {
+    id: 13,
+    image: shoe13,
+    title: "ZYN Signature Collection",
+    category: "Signature",
+    price: 295,
+    originalPrice: 350,
+    sizes: ["8", "9", "10", "11", "12"],
+    colors: ["Black", "Brown", "Wine"],
+    material: "Signature Leather",
+    description: "Exclusive signature collection featuring unique design elements and premium materials.",
+    features: ["Signature Design", "Exclusive", "Premium Materials", "Unique"],
+    rating: 4.9,
+    reviews: 56,
+    inStock: true,
+    isNew: true,
+    discount: 16
+  },
+  {
+    id: 14,
+    image: shoe14,
+    title: "ZYN Comfort Plus",
+    category: "Comfort",
+    price: 135,
+    originalPrice: 165,
+    sizes: ["6", "7", "8", "9", "10", "11"],
+    colors: ["Grey", "Brown", "Black"],
+    material: "Soft Synthetic",
+    description: "Maximum comfort shoes with extra cushioning and support for all-day wear.",
+    features: ["Extra Cushioning", "All-day Comfort", "Supportive", "Soft Materials"],
+    rating: 4.4,
+    reviews: 189,
+    inStock: true,
+    isNew: false,
+    discount: 18
+  },
+  {
+    id: 15,
+    image: shoe15,
+    title: "ZYN Elite Runner Pro",
+    category: "Athletic",
+    price: 215,
+    originalPrice: 255,
+    sizes: ["6", "7", "8", "9", "10", "11", "12"],
+    colors: ["Blue", "Black", "White"],
+    material: "Advanced Mesh",
+    description: "Professional running shoes with cutting-edge technology for elite performance.",
+    features: ["Elite Performance", "Advanced Tech", "Professional", "Cutting-edge"],
+    rating: 4.7,
+    reviews: 73,
+    inStock: true,
+    isNew: true,
+    discount: 16
+  },
+  {
+    id: 16,
+    image: shoe16,
+    title: "ZYN Contemporary Style",
+    category: "Fashion",
+    price: 185,
+    originalPrice: 220,
+    sizes: ["6", "7", "8", "9", "10", "11"],
+    colors: ["White", "Black", "Grey"],
+    material: "Modern Synthetic",
+    description: "Contemporary design with modern appeal perfect for fashion-conscious individuals.",
+    features: ["Contemporary", "Modern Appeal", "Fashion-forward", "Stylish"],
+    rating: 4.5,
+    reviews: 145,
+    inStock: true,
+    isNew: false,
+    discount: 16
+  },
+  {
+    id: 17,
+    image: shoe17,
+    title: "ZYN Classic White",
+    category: "Classic",
+    price: 165,
+    originalPrice: 195,
+    sizes: ["6", "7", "8", "9", "10", "11"],
+    colors: ["White", "Cream", "Off-white"],
+    material: "Premium Canvas",
+    description: "Clean white design with classic appeal, perfect for any casual or semi-formal occasion.",
+    features: ["Classic White", "Clean Design", "Versatile", "Timeless"],
+    rating: 4.6,
+    reviews: 198,
+    inStock: true,
+    isNew: false,
+    discount: 15
+  },
+  {
+    id: 18,
+    image: shoe111,
+    title: "ZYN Premium Collection",
+    category: "Premium",
+    price: 350,
+    originalPrice: 425,
+    sizes: ["8", "9", "10", "11", "12"],
+    colors: ["Black", "Brown", "Burgundy"],
+    material: "Exotic Leather",
+    description: "Ultra-premium collection featuring exotic materials and exceptional craftsmanship.",
+    features: ["Exotic Materials", "Ultra-premium", "Exceptional Craft", "Luxury"],
+    rating: 5.0,
+    reviews: 34,
+    inStock: true,
+    isNew: true,
+    discount: 18
+  },
+  {
+    id: 19,
+    image: zynshoe,
+    title: "ZYN Original Heritage",
+    category: "Heritage",
+    price: 199,
+    originalPrice: 235,
+    sizes: ["7", "8", "9", "10", "11", "12"],
+    colors: ["Brown", "Black", "Tan"],
+    material: "Heritage Leather",
+    description: "The original ZYN design that started our legacy, combining tradition with innovation.",
+    features: ["Original Design", "Heritage", "Traditional", "Legacy"],
+    rating: 4.8,
+    reviews: 267,
+    inStock: true,
+    isNew: false,
+    discount: 15,
+    artical: "Article ZYN019",
+    new: true,
+    persent: false
+  },
+  {
+    id: 20,
+    image: aboutimg,
+    images: [aboutimg, adidas1, adidas2],
+    title: "ZYN About Style",
+    category: "Casual",
+    price: 160,
+    originalPrice: 190,
+    sizes: ["6", "7", "8", "9", "10", "11"],
+    colors: ["Black", "White"],
+    material: "Canvas",
+    description: "Casual shoes inspired by modern designs for everyday comfort.",
+    features: ["Comfortable", "Stylish", "Lightweight"],
+    rating: 4.5,
+    reviews: 120,
+    inStock: true,
+    isNew: true,
+    discount: 16
+  },
+  {
+    id: 21,
+    image: adidas1,
+    images: [adidas1, adidas2, adidas3],
+    title: "ZYN Adidas Inspired",
+    category: "Athletic",
+    price: 220,
+    originalPrice: 270,
+    sizes: ["7", "8", "9", "10", "11", "12"],
+    colors: ["Black", "White", "Blue"],
+    material: "Synthetic",
+    description: "Athletic shoes with sporty design for active lifestyles.",
+    features: ["Breathable", "Durable", "Sporty"],
+    rating: 4.7,
+    reviews: 95,
+    inStock: true,
+    isNew: true,
+    discount: 19
+  },
+  {
+    id: 22,
+    image: adidas2,
+    images: [adidas2, adidas3, adidas4],
+    title: "ZYN Adidas Runner",
+    category: "Athletic",
+    price: 230,
+    originalPrice: 280,
+    sizes: ["6", "7", "8", "9", "10", "11", "12"],
+    colors: ["White", "Black"],
+    material: "Mesh",
+    description: "Running shoes with excellent cushioning.",
+    features: ["Cushioned", "Lightweight", "Running"],
+    rating: 4.6,
+    reviews: 110,
+    inStock: true,
+    isNew: false,
+    discount: 18
+  },
+  {
+    id: 23,
+    image: adidas3,
+    images: [adidas3, adidas4, adidas5],
+    title: "ZYN Adidas Comfort",
+    category: "Comfort",
+    price: 180,
+    originalPrice: 220,
+    sizes: ["7", "8", "9", "10", "11"],
+    colors: ["Grey", "Black"],
+    material: "Synthetic",
+    description: "Comfort-focused shoes for all-day wear.",
+    features: ["Comfort", "Supportive", "All-day"],
+    rating: 4.4,
+    reviews: 140,
+    inStock: true,
+    isNew: true,
+    discount: 18
+  },
+  {
+    id: 24,
+    image: adidas4,
+    title: "ZYN Adidas Classic",
+    category: "Classic",
+    price: 200,
+    originalPrice: 240,
+    sizes: ["8", "9", "10", "11", "12"],
+    colors: ["Black", "White"],
+    material: "Leather",
+    description: "Classic design with modern touches.",
+    features: ["Classic", "Modern", "Leather"],
+    rating: 4.5,
+    reviews: 130,
+    inStock: true,
+    isNew: false,
+    discount: 17
+  },
+  {
+    id: 25,
+    image: adidas5,
+    title: "ZYN Adidas Sport",
+    category: "Athletic",
+    price: 210,
+    originalPrice: 250,
+    sizes: ["6", "7", "8", "9", "10", "11"],
+    colors: ["Blue", "Black"],
+    material: "Mesh",
+    description: "Sport shoes for gym and outdoor activities.",
+    features: ["Sporty", "Breathable", "Active"],
+    rating: 4.6,
+    reviews: 105,
+    inStock: true,
+    isNew: true,
+    discount: 16
+  }
+];
+
+export default shoeCollection;

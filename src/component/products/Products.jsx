@@ -26,6 +26,32 @@
   import shoe111 from "../../assets/zynshoes/shoe111.png";
   import shoee2 from "../../assets/zynshoes/shoee2.jpg";
   import zynshoe from "../../assets/zynshoes/zynshoe.jpg";
+  import aboutimg from "../../assets/zynshoes/aboutimg.jpg";
+  import adidas1 from "../../assets/zynshoes/adidas1.png";
+  import adidas2 from "../../assets/zynshoes/adidas2.png";
+  import adidas3 from "../../assets/zynshoes/adidas3.webp";
+  import adidas4 from "../../assets/zynshoes/adidas4.png";
+  import adidas5 from "../../assets/zynshoes/adidas5.png";
+  import nik1 from "../../assets/zynshoes/nik1.png";
+  import nik2 from "../../assets/zynshoes/nik2.png";
+  import nik3 from "../../assets/zynshoes/nik3.png";
+  import nik4 from "../../assets/zynshoes/nik4.png";
+  import nike1j from "../../assets/zynshoes/nike1.jpg";
+  import nike1p from "../../assets/zynshoes/nike1.png";
+  import nike2 from "../../assets/zynshoes/nike2.png";
+  import nike3j from "../../assets/zynshoes/nike3.jpeg";
+  import nike3p from "../../assets/zynshoes/nike3.png";
+  import nike4 from "../../assets/zynshoes/nike4.png";
+  import nikke2 from "../../assets/zynshoes/nikke2.jpeg";
+  import she1 from "../../assets/zynshoes/she1.jpg";
+  import she2 from "../../assets/zynshoes/she2.webp";
+  import sho1 from "../../assets/zynshoes/sho1.jpg";
+  import sho2 from "../../assets/zynshoes/sho2.jpg";
+  import sho3 from "../../assets/zynshoes/sho3.jpg";
+  import sho4 from "../../assets/zynshoes/sho4.jpg";
+  import sho5 from "../../assets/zynshoes/sho5.jpg";
+  import shu1 from "../../assets/zynshoes/shu1.jpg";
+  import shu7 from "../../assets/zynshoes/shu7.jpg";
   const Products = () => {
     const[limits, setLimits] = useState(8);
     const [selectedCategory, setSelectedCategory] = useState('All');
@@ -34,217 +60,283 @@
     const { toggleWishlist, isInWishlist } = useWishlist();
     const { addToCart } = useCart();
     const { searchTerm } = useSearch();
-    const productcards = [
-      {
-        id: 1,
-        image: shoe1,
-        title: "ZYN Classic Brown",
-        artical: "Article ZYN001",
-        price: "$189",
-        category: "Shoes",
-        new: true,
-        persent: false,
-        description: "Premium leather classic brown shoes with comfortable sole"
-      },
-      {
-        id: 2,
-        image: shoee2,
-        title: "ZYN Sport Elite",
-        artical: "Article ZYN002",
-        price: "$225",
-        category: "Shoes",
-        new: false,
-        persent: true,
-        description: "High-performance athletic shoes for active lifestyle"
-      },
-      {
-        id: 3,
-        image: shoe3,
-        title: "ZYN Urban Style",
-        artical: "Article ZYN003",
-        price: "$165",
-        category: "Shoes",
-        new: false,
-        persent: false,
-        description: "Modern urban design with superior comfort"
-      },
-      {
-        id: 4,
-        image: shoe4,
-        title: "ZYN Professional",
-        artical: "Article ZYN004",
-        price: "$275",
-        category: "Shoes",
-        new: false,
-        persent: true,
-        description: "Elegant professional shoes for business occasions"
-      },
-      {
-        id: 5,
-        image: shoe5,
-        title: "ZYN Casual Comfort",
-        artical: "Article ZYN005",
-        price: "$145",
-        category: "Shoes",
-        new: true,
-        persent: false,
-        description: "Comfortable casual shoes for everyday wear"
-      },
-      {
-        id: 6,
-        image: shoe6,
-        title: "ZYN Adventure",
-        artical: "Article ZYN006",
-        price: "$195",
-        category: "Shoes",
-        new: true,
-        persent: false,
-        description: "Durable outdoor shoes for adventure enthusiasts"
-      },
-      {
-        id: 7,
-        image: shoe7,
-        title: "ZYN Luxury Edition",
-        artical: "Article ZYN007",
-        price: "$320",
-        category: "Shoes",
-        new: false,
-        persent: true,
-        description: "Premium luxury shoes with handcrafted details"
-      },
-      {
-        id: 8,
-        image: shoe8,
-        title: "ZYN Street Walker",
-        artical: "Article ZYN008",
-        price: "$155",
-        category: "Shoes",
-        new: false,
-        persent: false,
-        description: "Stylish street shoes with modern design"
-      },
-      {
-        id: 9,
-        image: shoe9,
-        title: "ZYN Executive",
-        artical: "Article ZYN009",
-        price: "$285",
-        category: "Shoes",
-        new: true,
-        persent: false,
-        description: "Executive level shoes for corporate professionals"
-      },
-      {
-        id: 10,
-        image: shoe10,
-        title: "ZYN Trendsetter",
-        artical: "Article ZYN010",
-        price: "$175",
-        category: "Shoes",
-        new: true,
-        persent: false,
-        description: "Trendy shoes that set fashion standards"
-      },
-      {
-        id: 11,
-        image: shoe11,
-        title: "ZYN Heritage",
-        artical: "Article ZYN011",
-        price: "$245",
-        category: "Shoes",
-        new: false,
-        persent: true,
-        description: "Classic heritage design with modern comfort"
-      },
-      {
-        id: 12,
-        image: shoe12,
-        title: "ZYN Performance",
-        artical: "Article ZYN012",
-        price: "$205",
-        category: "Shoes",
-        new: true,
-        persent: false,
-        description: "High-performance shoes for active individuals"
-      },
-      {
-        id: 13,
-        image: shoe13,
-        title: "ZYN Signature",
-        artical: "Article ZYN013",
-        price: "$295",
-        category: "Shoes",
-        new: true,
-        persent: false,
-        description: "Signature collection with unique design elements"
-      },
-      {
-        id: 14,
-        image: shoe14,
-        title: "ZYN Comfort Plus",
-        artical: "Article ZYN014",
-        price: "$135",
-        category: "Shoes",
-        new: false,
-        persent: true,
-        description: "Extra comfortable shoes with cushioned sole"
-      },
-      {
-        id: 15,
-        image: shoe15,
-        title: "ZYN Elite Runner",
-        artical: "Article ZYN015",
-        price: "$215",
-        category: "Shoes",
-        new: false,
-        persent: false,
-        description: "Professional running shoes with advanced technology"
-      },
-      {
-        id: 16,
-        image: shoe16,
-        title: "ZYN Fashion Forward",
-        artical: "Article ZYN016",
-        price: "$185",
-        category: "Shoes",
-        new: false,
-        persent: true,
-        description: "Fashion-forward design with contemporary appeal"
-      },
-      {
-        id: 17,
-        image: shoe17,
-        title: "ZYN Classic White",
-        artical: "Article ZYN017",
-        price: "$165",
-        category: "Shoes",
-        new: false,
-        persent: true,
-        description: "Clean white design perfect for any occasion"
-      },
-      {
-        id: 18,
-        image: shoe111,
-        title: "ZYN Premium Collection",
-        artical: "Article ZYN018",
-        price: "$350",
-        category: "Shoes",
-        new: true,
-        persent: false,
-        description: "Premium collection with exclusive materials"
-      },
-      {
-        id: 19,
-        image: zynshoe,
-        title: "ZYN Original",
-        artical: "Article ZYN019",
-        price: "$199",
-        category: "Shoes",
-        new: true,
-        persent: false,
-        description: "Original ZYN design that started it all"
-      }
-    ];
+  const productcards = [
+    {
+      id: 1,
+      image: shoe1,
+      title: "ZYN Classic Brown",
+      artical: "Article ZYN001",
+      price: "$189",
+      category: "Shoes",
+      new: true,
+      persent: false,
+      description: "Premium leather classic brown shoes with comfortable sole"
+    },
+    {
+      id: 2,
+      image: shoee2,
+      title: "ZYN Sport Elite",
+      artical: "Article ZYN002",
+      price: "$225",
+      category: "Shoes",
+      new: false,
+      persent: true,
+      description: "High-performance athletic shoes for active lifestyle"
+    },
+    {
+      id: 3,
+      image: shoe3,
+      title: "ZYN Urban Style",
+      artical: "Article ZYN003",
+      price: "$165",
+      category: "Shoes",
+      new: false,
+      persent: false,
+      description: "Modern urban design with superior comfort"
+    },
+    {
+      id: 4,
+      image: shoe4,
+      title: "ZYN Professional",
+      artical: "Article ZYN004",
+      price: "$275",
+      category: "Shoes",
+      new: false,
+      persent: true,
+      description: "Elegant professional shoes for business occasions"
+    },
+    {
+      id: 5,
+      image: shoe5,
+      title: "ZYN Casual Comfort",
+      artical: "Article ZYN005",
+      price: "$145",
+      category: "Shoes",
+      new: true,
+      persent: false,
+      description: "Comfortable casual shoes for everyday wear"
+    },
+    {
+      id: 6,
+      image: shoe6,
+      title: "ZYN Adventure",
+      artical: "Article ZYN006",
+      price: "$195",
+      category: "Shoes",
+      new: true,
+      persent: false,
+      description: "Durable outdoor shoes for adventure enthusiasts"
+    },
+    {
+      id: 7,
+      image: shoe7,
+      title: "ZYN Luxury Edition",
+      artical: "Article ZYN007",
+      price: "$320",
+      category: "Shoes",
+      new: false,
+      persent: true,
+      description: "Premium luxury shoes with handcrafted details"
+    },
+    {
+      id: 8,
+      image: shoe8,
+      title: "ZYN Street Walker",
+      artical: "Article ZYN008",
+      price: "$155",
+      category: "Shoes",
+      new: false,
+      persent: false,
+      description: "Stylish street shoes with modern design"
+    },
+    {
+      id: 9,
+      image: shoe9,
+      title: "ZYN Executive",
+      artical: "Article ZYN009",
+      price: "$285",
+      category: "Shoes",
+      new: true,
+      persent: false,
+      description: "Executive level shoes for corporate professionals"
+    },
+    {
+      id: 10,
+      image: shoe10,
+      title: "ZYN Trendsetter",
+      artical: "Article ZYN010",
+      price: "$175",
+      category: "Shoes",
+      new: true,
+      persent: false,
+      description: "Trendy shoes that set fashion standards"
+    },
+    {
+      id: 11,
+      image: shoe11,
+      title: "ZYN Heritage",
+      artical: "Article ZYN011",
+      price: "$245",
+      category: "Shoes",
+      new: false,
+      persent: true,
+      description: "Classic heritage design with modern comfort"
+    },
+    {
+      id: 12,
+      image: shoe12,
+      title: "ZYN Performance",
+      artical: "Article ZYN012",
+      price: "$205",
+      category: "Shoes",
+      new: true,
+      persent: false,
+      description: "High-performance shoes for active individuals"
+    },
+    {
+      id: 13,
+      image: shoe13,
+      title: "ZYN Signature",
+      artical: "Article ZYN013",
+      price: "$295",
+      category: "Shoes",
+      new: true,
+      persent: false,
+      description: "Signature collection with unique design elements"
+    },
+    {
+      id: 14,
+      image: shoe14,
+      title: "ZYN Comfort Plus",
+      artical: "Article ZYN014",
+      price: "$135",
+      category: "Shoes",
+      new: false,
+      persent: true,
+      description: "Extra comfortable shoes with cushioned sole"
+    },
+    {
+      id: 15,
+      image: shoe15,
+      title: "ZYN Elite Runner",
+      artical: "Article ZYN015",
+      price: "$215",
+      category: "Shoes",
+      new: false,
+      persent: false,
+      description: "Professional running shoes with advanced technology"
+    },
+    {
+      id: 16,
+      image: shoe16,
+      title: "ZYN Fashion Forward",
+      artical: "Article ZYN016",
+      price: "$185",
+      category: "Shoes",
+      new: false,
+      persent: true,
+      description: "Fashion-forward design with contemporary appeal"
+    },
+    {
+      id: 17,
+      image: shoe17,
+      title: "ZYN Classic White",
+      artical: "Article ZYN017",
+      price: "$165",
+      category: "Shoes",
+      new: false,
+      persent: true,
+      description: "Clean white design perfect for any occasion"
+    },
+    {
+      id: 18,
+      image: shoe111,
+      title: "ZYN Premium Collection",
+      artical: "Article ZYN018",
+      price: "$350",
+      category: "Shoes",
+      new: true,
+      persent: false,
+      description: "Premium collection with exclusive materials"
+    },
+    {
+      id: 19,
+      image: zynshoe,
+      title: "ZYN Original",
+      artical: "Article ZYN019",
+      price: "$199",
+      category: "Shoes",
+      new: true,
+      persent: false,
+      description: "Original ZYN design that started it all"
+    },
+    {
+      id: 20,
+      image: aboutimg,
+      title: "ZYN About Style",
+      artical: "Article ZYN020",
+      price: "$160",
+      category: "Shoes",
+      new: true,
+      persent: false,
+      description: "Casual shoes inspired by modern designs for everyday comfort"
+    },
+    {
+      id: 21,
+      image: adidas1,
+      title: "ZYN Adidas Inspired",
+      artical: "Article ZYN021",
+      price: "$220",
+      category: "Shoes",
+      new: true,
+      persent: false,
+      description: "Athletic shoes with sporty design for active lifestyles"
+    },
+    {
+      id: 22,
+      image: adidas2,
+      title: "ZYN Adidas Runner",
+      artical: "Article ZYN022",
+      price: "$230",
+      category: "Shoes",
+      new: false,
+      persent: false,
+      description: "Running shoes with excellent cushioning"
+    },
+    {
+      id: 23,
+      image: adidas3,
+      title: "ZYN Adidas Comfort",
+      artical: "Article ZYN023",
+      price: "$180",
+      category: "Shoes",
+      new: true,
+      persent: false,
+      description: "Comfort-focused shoes for all-day wear"
+    },
+    {
+      id: 24,
+      image: adidas4,
+      title: "ZYN Adidas Classic",
+      artical: "Article ZYN024",
+      price: "$200",
+      category: "Shoes",
+      new: false,
+      persent: false,
+      description: "Classic design with modern touches"
+    },
+    {
+      id: 25,
+      image: adidas5,
+      title: "ZYN Adidas Sport",
+      artical: "Article ZYN025",
+      price: "$210",
+      category: "Shoes",
+      new: true,
+      persent: false,
+      description: "Sport shoes for gym and outdoor activities"
+    }
+  ];
     
   let filteredProducts = productcards.filter(product =>
     (product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||

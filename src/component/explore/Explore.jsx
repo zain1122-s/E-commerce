@@ -1,34 +1,35 @@
 import React, { useState } from "react";
 import "./explore.css";
 
+import shoe5 from "../../assets/zynshoes/shoe5.jpg";
+import shoe6 from "../../assets/zynshoes/shoe6.jpg";
+import shoe7 from "../../assets/zynshoes/shoe7.jpg";
+import shoe8 from "../../assets/zynshoes/shoe8.jpg";
+
 const explorecards = [
   {
     id: 1,
     title: "Nature Peace",
     subtitle: "Woody shoe",
-    picture:
-      "https://i.pinimg.com/1200x/44/f8/b6/44f8b674a566a1f9e53420473a80e848.jpg",
+    picture: shoe5,
   },
   {
     id: 2,
     title: "Mountain Spirit",
     subtitle: "Wooden Boot",
-    picture:
-      "https://i.pinimg.com/1200x/1b/ac/8b/1bac8b13a974aec83f93863b6e514613.jpg",
+    picture: shoe6,
   },
   {
     id: 3,
     title: "Forest Vibes",
     subtitle: "Classic Shoe",
-    picture:
-      "https://i.pinimg.com/736x/46/64/ea/4664ead82cdac5486557d65e2b93d83f.jpg",
+    picture: shoe7,
   },
   {
     id: 4,
     title: "Wild Soul",
     subtitle: "Leather Boot",
-    picture:
-      "https://i.pinimg.com/1200x/d0/24/cc/d024ccadf1cd765e40668e27698b756c.jpg",
+    picture: shoe8,
   },
 ];
 

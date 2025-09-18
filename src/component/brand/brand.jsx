@@ -1,21 +1,22 @@
 import React from "react";
 import "./brand.css";
+import shoe1 from "../../assets/zynshoes/shoe1.jpg";
+import shoe3 from "../../assets/zynshoes/shoe3.jpg";
+import shoe4 from "../../assets/zynshoes/shoe4.jpg";
+
 const Brand = () => {
   const brandcards = [
     {
-      imagecard:
-        "https://i.pinimg.com/736x/1f/88/1d/1f881d7cc0c81c5f2d0e7fc5c6a8190e.jpg",
-      title: "Devich Wooden Shoes",
+      imagecard: shoe1,
+      title: "ZYN Classic Brown Leather",
     },
     {
-      imagecard:
-        "https://i.pinimg.com/736x/31/c6/7e/31c67e9ea9a0c328cc960d33826f5c4c.jpg",
-      title: "Woody Wooden Shoes",
+      imagecard: shoe3,
+      title: "ZYN Urban Casual",
     },
     {
-      imagecard:
-        "https://i.pinimg.com/1200x/65/65/a0/6565a0e9e51ddc9a008ad70f33e4e0fe.jpg",
-      title: "Accessories",
+      imagecard: shoe4,
+      title: "ZYN Professional Oxford",
     },
   ];
   return (
