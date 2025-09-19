@@ -1,0 +1,40 @@
+.checkout-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.checkout-step {
+  margin-bottom: 20px;
+}
+
+.checkout-step h2 {
+  margin-bottom: 20px;
+}
+
+.checkout-step form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkout-step input,
+.checkout-step select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.checkout-step button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.checkout-step button:hover {
+  background: #0056b3;
+}

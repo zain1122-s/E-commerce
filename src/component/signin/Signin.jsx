@@ -13,15 +13,53 @@ const Signin = () => {
   const [isPassword] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [error, setError] = useState('');
 
   const navigate = useNavigate();
-  const { login } = useAuth();
+  const { login, signup, loginWithGoogle, loginWithFacebook } = useAuth();
 
-  const handleLogin = () => {
-    if (login(email, password)) {
+  const handleLogin = async () => {
+    setError('');
+    const result = await login(email, password);
+    if (result.success) {
       navigate("/home");
     } else {
-      alert('Invalid credentials');
+      setError(result.error);
+    }
+  };
+
+  const handleSignup = async () => {
+    setError('');
+    if (password !== confirmPassword) {
+      setError('Passwords do not match');
+      return;
+    }
+    const result = await signup(email, password);
+    if (result.success) {
+      navigate("/home");
+    } else {
+      setError(result.error);
+    }
+  };
+
+  const handleGoogleLogin = async () => {
+    setError('');
+    const result = await loginWithGoogle();
+    if (result.success) {
+      navigate("/home");
+    } else {
+      setError(result.error);
+    }
+  };
+
+  const handleFacebookLogin = async () => {
+    setError('');
+    const result = await loginWithFacebook();
+    if (result.success) {
+      navigate("/home");
+    } else {
+      setError(result.error);
     }
   };
   return (
@@ -146,7 +184,7 @@ const Signin = () => {
               {!islogin && (
                 <div className="form-group">
                   <label>Confirm Password</label>
-                  <input type="password" placeholder="********" />
+                  <input type="password" placeholder="********" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                 </div>
               )}
 
@@ -170,11 +208,12 @@ const Signin = () => {
               )}
               {!forgoten && (
                 <div className="butn">
-                  <button onClick={handleLogin}>
-                    {islogin ? "login" : "continue"}
+                  <button onClick={islogin ? handleLogin : handleSignup}>
+                    {islogin ? "login" : "sign up"}
                   </button>
                 </div>
               )}
+              {error && <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
 
               {!forgoten && (
                 <div className="lines">
@@ -187,14 +226,14 @@ const Signin = () => {
               {!forgoten && (
                 <div className="socialmedia-account">
                   <div className="google-login">
-                    <button>
+                    <button onClick={handleGoogleLogin}>
                       {" "}
                       <FcGoogle />{" "}
-                      {islogin ? "log in with Google" : "sign up with oogle"}
+                      {islogin ? "log in with Google" : "sign up with Google"}
                     </button>
                   </div>
                   <div className="facebook-login">
-                    <button>
+                    <button onClick={handleFacebookLogin}>
                       {" "}
                       <RiFacebookCircleFill color="#039be5" />{" "}
                       {islogin

@@ -13,6 +13,7 @@ import { SearchProvider } from "./component/context/SearchContext";
 import { AuthProvider } from "./component/context/AuthContext";
 import About from "./component/aboutus/About";
 import Wishlist from "./component/wishlist/Wishlist";
+import Checkout from "./component/checkout/Checkout";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
                 <Route path="/shop" element={<Layout><Shop /></Layout>} />
                 <Route path="products/:id" element={<Layout><Productdetail /></Layout>} />
                 <Route path="/cart" element={<Layout><Cart /></Layout>} />
+                <Route path="/checkout" element={<Layout><Checkout /></Layout>} />
                 <Route path="/about" element={<Layout><About /></Layout>} />
                 <Route path="/wishlist" element={<Layout><Wishlist /></Layout>} />
               </Routes>

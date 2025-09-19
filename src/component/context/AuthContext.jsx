@@ -7,13 +7,34 @@ export { AuthContext };
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
-  const login = (email, password) => {
+  const signup = async (email, password) => {
+    // Mock signup
+    if (email && password) {
+      setUser({ email });
+      return { success: true };
+    }
+    return { success: false, error: 'Invalid credentials' };
+  };
+
+  const login = async (email, password) => {
     // Mock login
     if (email && password) {
       setUser({ email });
-      return true;
+      return { success: true };
     }
-    return false;
+    return { success: false, error: 'Invalid credentials' };
+  };
+
+  const loginWithGoogle = async () => {
+    // Mock Google login
+    setUser({ email: 'google@example.com' });
+    return { success: true };
+  };
+
+  const loginWithFacebook = async () => {
+    // Mock Facebook login
+    setUser({ email: 'facebook@example.com' });
+    return { success: true };
   };
 
   const logout = () => {
@@ -21,7 +42,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout }}>
+    <AuthContext.Provider value={{ user, signup, login, loginWithGoogle, loginWithFacebook, logout }}>
       {children}
     </AuthContext.Provider>
   );

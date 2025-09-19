@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./Cart.css"; // Optional: Create Cart.css for styling
 import { useCart } from "../context/useCart";
 import { ChevronRight, Trash2 } from "lucide-react";
@@ -16,6 +16,7 @@ import { IoTime } from "react-icons/io5";
 const Cart = () => {
   const { cartItems, removeFromCart } = useCart();
   const location = useLocation();
+  const navigate = useNavigate();
   const [checkOut, setCheckOut] = useState(false);
   const [showContact, setShowContact] = useState(false);
 
@@ -61,11 +62,10 @@ const Cart = () => {
           <div className="cart-left">
             <div className="cart-heading">
               <div className="product">Product</div>
-              <div className="product-info">
-                <h1>Price</h1>
-                <h1>Quantity</h1>
-                <h1>Subtotal</h1>
-              </div>
+              <h1>Price</h1>
+              <h1>Quantity</h1>
+              <h1>Subtotal</h1>
+              <div></div>
             </div>
 
             {cartItems.length === 0 ? (
@@ -76,9 +76,9 @@ const Cart = () => {
                   <li key={item.id}>
                     <img src={item.image} alt={item.name} />
                     <span>{item.name}</span>
-                    <span>${item.price}</span>
+                    <span>€{item.price}</span>
                     <span>{item.quantity}</span>
-                    <span>${(item.price * item.quantity).toFixed(2)}</span>
+                    <span>€{(item.price * item.quantity).toFixed(2)}</span>
                     <button
                       onClick={() => removeFromCart(item.id)}
                       className="delete-btn"
@@ -96,15 +96,15 @@ const Cart = () => {
 
               <div className="cart-row">
                 <span className="cart-label">Subtotal</span>
-                <span className="cart-subtotal">${subtotal.toFixed(2)}</span>
+                <span className="cart-subtotal">€{subtotal.toFixed(2)}</span>
               </div>
 
               <div className="cart-row">
                 <span className="cart-label total-label">Total</span>
-                <span className="cart-total">${total.toFixed(2)}</span>
+                <span className="cart-total">€{total.toFixed(2)}</span>
               </div>
 
-              <button className="cart-btn" onClick={() => setCheckOut(true)}>
+              <button className="cart-btn" onClick={() => navigate('/checkout')}>
                 Check Out
               </button>
               <button className="cart-btn">
@@ -206,10 +206,10 @@ const Cart = () => {
               <div className="subtotal">
                 <h1>Subtotal</h1>
                 {cartItems.map((item) => (
-                  <p key={item.id} className="p2">${(item.price * item.quantity).toFixed(2)}</p>
+                  <p key={item.id} className="p2">€{(item.price * item.quantity).toFixed(2)}</p>
                 ))}
-                <p className="p2">${subtotal.toFixed(2)}</p>
-                <p className="p3">${total.toFixed(2)}</p>
+                <p className="p2">€{subtotal.toFixed(2)}</p>
+                <p className="p3">€{total.toFixed(2)}</p>
               </div>
             </div>
             <div className="right-options">
