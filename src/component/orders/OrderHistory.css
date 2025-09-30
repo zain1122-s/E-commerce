@@ -1,35 +1,37 @@
 .order-history {
-  padding: 20px;
+  padding: clamp(15px, 3vw, 20px);
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .order-history h1 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: clamp(20px, 4vh, 30px);
+  font-size: clamp(24px, 5vw, 32px);
 }
 
 .orders-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: clamp(15px, 3vh, 20px);
 }
 
 .order-item {
   border: 1px solid #ddd;
-  padding: 20px;
+  padding: clamp(15px, 3vw, 20px);
   border-radius: 8px;
   background: #fff;
 }
 
 .order-item h3 {
   margin-bottom: 10px;
+  font-size: clamp(18px, 3vw, 20px);
 }
 
 .order-items {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: clamp(10px, 2vw, 15px);
   margin-top: 15px;
 }
 
@@ -38,12 +40,49 @@
   align-items: center;
   gap: 10px;
   border: 1px solid #eee;
-  padding: 10px;
+  padding: clamp(8px, 2vw, 10px);
   border-radius: 5px;
+  flex: 1 1 200px;
 }
 
 .order-item-detail img {
-  width: 50px;
-  height: 50px;
+  width: clamp(40px, 8vw, 50px);
+  height: clamp(40px, 8vw, 50px);
   object-fit: cover;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .order-item-detail {
+    flex: 1 1 180px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .order-history {
+    padding: 15px;
+  }
+
+  .order-item-detail {
+    flex-direction: column;
+    text-align: center;
+    flex: 1 1 150px;
+  }
+
+  .order-items {
+    justify-content: center;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .order-item-detail {
+    flex: 1 1 120px;
+  }
+
+  .order-items {
+    flex-direction: column;
+    align-items: center;
+  }
 }

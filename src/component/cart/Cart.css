@@ -4,9 +4,9 @@
 }
 
 .cart-container {
-  padding: 20px;
+  padding: clamp(15px, 3vw, 20px);
   display: flex;
-  gap: 80px;
+  gap: clamp(40px, 8vw, 80px);
 }
 
 .cart-image {
@@ -38,13 +38,13 @@
 
 .cart-color h1 {
   margin: 0 0 20px 0;
-  font-size: 36px;
+  font-size: clamp(24px, 8vw, 36px);
   text-align: center;
 }
 
 .cart-color p {
   margin: 10px 0;
-  font-size: 18px;
+  font-size: clamp(14px, 4vw, 18px);
   display: flex;
   align-items: center;
   gap: 10px;

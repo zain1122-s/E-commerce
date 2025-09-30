@@ -48,10 +48,36 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  font-size: clamp(14px, 2vw, 16px);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1025px) {
+  body {
+    font-size: 16px;
+  }
 }
 
 /* Typography */
@@ -63,23 +89,40 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 700;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 600;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 600;
+}
+
+h5 {
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  font-weight: 600;
+}
+
+h6 {
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
   font-weight: 600;
 }
 
 p {
+  font-size: clamp(0.9rem, 2vw, 1rem);
   margin-bottom: 1rem;
   color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 a {
@@ -111,6 +154,79 @@ a:hover {
 
 .bg-secondary {
   background-color: var(--secondary-color);
+}
+
+/* Responsive Utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+/* Grid System */
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+@media (max-width: 768px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Spacing Utilities */
+.spacing-sm {
+  padding: 0.5rem;
+}
+
+.spacing-md {
+  padding: 1rem;
+}
+
+.spacing-lg {
+  padding: 2rem;
+}
+
+.spacing-xl {
+  padding: 3rem;
+}
+
+@media (max-width: 768px) {
+  .spacing-lg {
+    padding: 1.5rem;
+  }
+
+  .spacing-xl {
+    padding: 2rem;
+  }
 }
 
 /* Animation Classes */

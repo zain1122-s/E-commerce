@@ -1,6 +1,6 @@
 .Product-container {
   width: 100%;
-  padding: 60px 70px 40px 70px;
+  padding: clamp(40px, 8vh, 60px) clamp(20px, 8vw, 70px) clamp(30px, 6vh, 40px) clamp(20px, 8vw, 70px);
   background: linear-gradient(135deg, #fafafa 0%, #f5f7fa 100%);
   text-align: center;
   position: relative;
@@ -18,9 +18,9 @@
 }
 
 .Product-container h1 {
-  font-size: 36px;
+  font-size: clamp(24px, 5vw, 36px);
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: clamp(15px, 3vh, 20px);
   color: var(--text-primary);
   position: relative;
   display: inline-block;
@@ -63,8 +63,8 @@
 
 .product-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(280px, 25vw, 300px), 1fr));
+  gap: clamp(20px, 4vw, 35px);
 }
 
 .product-data {
@@ -88,7 +88,7 @@
 
 .product-data .picture {
   width: 100%;
-  height: 300px;
+  height: clamp(250px, 30vh, 300px);
   object-fit: cover;
   display: block;
 }
@@ -240,7 +240,7 @@
 }
 
 .product-info h2 {
-  font-size: 20px;
+  font-size: clamp(16px, 3vw, 20px);
   font-weight: 700;
   color: var(--text-primary);
   margin: 8px 0 12px 0;
@@ -260,7 +260,7 @@
 }
 
 .product-info .price {
-  font-size: 18px;
+  font-size: clamp(16px, 2.5vw, 18px);
   font-weight: 700;
   color: var(--primary-color);
   display: inline-block;
@@ -275,12 +275,12 @@
 }
 
 .more {
-  padding: 15px 60px;
+  padding: clamp(12px, 3vh, 15px) clamp(30px, 8vw, 60px);
   border: 2px solid var(--primary-color);
   color: var(--primary-color);
-  font-size: 16px;
+  font-size: clamp(14px, 2.5vw, 16px);
   font-weight: 600;
-  margin-top: 40px;
+  margin-top: clamp(30px, 6vh, 40px);
   cursor: pointer;
   background: transparent;
   border-radius: var(--border-radius);
@@ -316,6 +316,22 @@
   transform: translateY(0);
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .Product-container {
+    padding: 40px 30px;
+  }
+
+  .product-cards {
+    gap: 25px;
+  }
+
+  .product-data .picture {
+    height: 280px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .Product-container {
     padding: 20px;
@@ -331,7 +347,7 @@
 
   .more {
     padding: 10px 30px;
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 

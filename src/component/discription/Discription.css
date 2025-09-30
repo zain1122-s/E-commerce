@@ -19,7 +19,7 @@
 }
 
 .discription-heading h1{
-    font-size: 25px;
+    font-size: clamp(20px, 4vw, 25px);
     font-weight: 600;
     color: black;
     margin-bottom: 20px;
