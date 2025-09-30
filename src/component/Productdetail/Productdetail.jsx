@@ -5,7 +5,7 @@ import { MdStarRate } from "react-icons/md";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
-import Discription from "../discription/discription";
+import Discription from "../discription/Discription";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { useCart } from "../context/useCart";
 import { useWishlist } from "../context/useWishlist";
