@@ -26,7 +26,7 @@
 
 .signin-left {
     width: 50%;
-    min-height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,14 +89,14 @@
 
 .signin-right {
     width: 50%;
-    min-height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0.4);
     position: relative;
     z-index: 1;
-    padding: 40px;
+    padding: 20px;
 }
 
 .right-data {
@@ -123,7 +123,7 @@
 }
 
 .container {
-    padding: 40px;
+    padding: 20px;
     position: relative;
     z-index: 1;
     display: flex;
@@ -148,7 +148,7 @@
     font-weight: 500;
     color: var(--text-secondary);
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
     width: 100%;
 }
 
@@ -197,7 +197,7 @@
 }
 
 .form-input {
-    margin-top: 32px;
+    margin-top: 16px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -205,7 +205,7 @@
 }
 
 .butn {
-    margin-top: 32px;
+    margin-top: 16px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -255,7 +255,7 @@
     display: flex;
     align-items: center;
     gap: 24px;
-    margin-top: 32px;
+    margin-top: 16px;
     position: relative;
 }
 
@@ -274,7 +274,7 @@
 }
 
 .socialmedia-account {
-    margin-top: 24px;
+    margin-top: 12px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -327,8 +327,8 @@
     align-items: center;
     gap: 8px;
     justify-content: center;
-    margin-top: 24px;
-    padding-top: 24px;
+    margin-top: 12px;
+    padding-top: 12px;
     border-top: 1px solid #e5e7eb;
     width: 100%;
     text-align: center;
