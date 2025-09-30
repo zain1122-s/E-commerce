@@ -49,7 +49,13 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Animation for desktop only */
+@media (min-width: 769px) {
+  .left-name h1 {
     animation: fadeInUp 1s ease-out;
+  }
 }
 
 .left-name {
@@ -567,24 +573,29 @@
   .signin-container {
     flex-direction: column;
     padding: 10px;
+    min-height: 100vh;
+    justify-content: center;
   }
 
   .signin-left {
-    padding: 20px 10px;
-  }
-
-  .left-name {
     display: none;
   }
 
   .signin-right {
+    width: 100%;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
     padding: 15px 0;
   }
 
   .right-data {
-    width: 90%;
+    width: 95%;
+    animation: none; /* Disable sliding animation on mobile */
+  }
+
+  .left-name h1 {
+    animation: none; /* Disable fadeInUp animation on mobile */
   }
 
   .form-group input,
@@ -650,6 +661,9 @@
   }
 }
 
-.right-data {
-  animation: slideInRight 0.8s ease-out 0.2s both;
+/* Animation for desktop only */
+@media (min-width: 769px) {
+  .right-data {
+    animation: slideInRight 0.8s ease-out 0.2s both;
+  }
 }
