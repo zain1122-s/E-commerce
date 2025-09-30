@@ -54,6 +54,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Responsive Breakpoints */

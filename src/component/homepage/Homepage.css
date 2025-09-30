@@ -1,3 +1,7 @@
+.homepage-container {
+  overflow-x: hidden;
+}
+
 .homepage-content{
   background-image: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 100%),
     url(https://images.unsplash.com/photo-1734989591520-eb44771b9077?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
@@ -129,9 +133,9 @@
 @media (max-width: 768px) {
     .homepage-content {
         background-position: center;
+        background-size: cover;
         padding: 20px;
-        height: auto;
-        min-height: 100vh;
+        height: 100vh;
         justify-content: center;
         align-items: center;
         overflow-x: hidden;
@@ -142,6 +146,7 @@
         height: auto;
         padding: 25px;
         gap: 20px;
+        text-align: center;
     }
 
     .homepage-card h1 {

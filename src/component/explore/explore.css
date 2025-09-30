@@ -129,3 +129,52 @@
 .dot.active {
   background: #cfa03f;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .explore-container {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .explore-left {
+    text-align: center;
+  }
+
+  .explore-left h1 {
+    font-size: 2rem;
+  }
+
+  .explore-left p {
+    font-size: 0.9rem;
+  }
+
+  .explore-left button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .slide {
+    height: 300px;
+  }
+
+  .slide-overlay {
+    padding: 15px;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .slide-overlay h2 {
+    font-size: 1.2rem;
+  }
+
+  .controls {
+    right: 10px;
+  }
+
+  .controls button {
+    padding: 15px 20px;
+    font-size: 1rem;
+  }
+}
