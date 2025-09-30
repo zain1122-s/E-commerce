@@ -220,17 +220,18 @@
         top: 0;
         left: 0;
         width: 100%;
-        padding: 10px 16px;
+        padding: 8px 12px;
         background: white;
         display: flex;
         justify-content: space-between;
         align-items:center ;
         z-index: 1000;
+        height: 60px;
     }
 
     .navbar-content{
         position: absolute;
-        top: 70px;
+        top: 60px;
         left: 0;
         width: 100%;
         flex-direction: column;
@@ -244,6 +245,7 @@
         transform: translateY(-10px);
         opacity: 0;
         transition: var(--transition-normal);
+        gap: 20px;
     }
     .navbar-content.open{
         display: flex;
@@ -251,14 +253,40 @@
         opacity: 1;
     }
 
+    .navbar-content a {
+        font-size: 1rem;
+        padding: 12px 20px;
+        width: 100%;
+        text-align: center;
+    }
+
     .menu-button{
         display: block;
         cursor: pointer;
         z-index: 1001;
-
+        padding: 6px;
     }
 
     .navbar-logo img {
-    margin: 0;
-  }
+        width: 35px;
+        height: 35px;
+        margin: 0;
+    }
+
+    .navbar-icon {
+        gap: 15px;
+    }
+
+    .icon1 {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .wishlist-count, .cart-count {
+        width: 16px;
+        height: 16px;
+        font-size: 10px;
+        top: -6px;
+        right: -6px;
+    }
 }
