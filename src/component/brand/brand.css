@@ -37,7 +37,8 @@ align-items: center;
 gap: 30px;
  }
  .brand-card img{
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: 430px;
     object-fit: cover;
     border-radius: 10px;
@@ -51,20 +52,23 @@ gap: 30px;
  }
 
  @media (max-width: 768px) {
-    .brand-bottom{
-        flex-direction: column;
+     .brand-bottom{
+         flex-direction: column;
+     }
+    .brand-card  {
+      width: 100%;
+      height: auto;
+
     }
-   .brand-card  {
-     width: 100%;
-     height: auto;
-     
-   }
-.brand-top h1{
-    font-size: 28px;
-    font-weight: 600;
-}
-   .brand-card h1 {
-     font-size: 20px;
-     font-weight: bold;
-   }
+    .brand-card img{
+      height: 300px;
+    }
+ .brand-top h1{
+     font-size: 24px;
+     font-weight: 600;
  }
+    .brand-card h1 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }

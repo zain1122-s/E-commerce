@@ -49,6 +49,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
   font-size: clamp(14px, 2vw, 16px);
+  overflow-x: hidden;
 }
 
 html {
