@@ -138,7 +138,7 @@
     font-weight: 700;
     color: var(--text-primary);
     line-height: 2.25rem;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     text-align: center;
     width: 100%;
 }
@@ -148,14 +148,14 @@
     font-weight: 500;
     color: var(--text-secondary);
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     width: 100%;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     position: relative;
     width: 100%;
     align-items: stretch;
@@ -277,7 +277,7 @@
     margin-top: 12px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 8px;
     width: 100%;
     align-items: center;
 }
@@ -573,7 +573,7 @@
   .signin-container {
     flex-direction: column;
     padding: 10px;
-    height: auto;
+    height: 100vh;
     justify-content: center;
   }
 
@@ -591,11 +591,12 @@
 
   .right-data {
     width: 95%;
+    max-height: 95vh;
     animation: none; /* Disable sliding animation on mobile */
   }
 
   .container {
-    padding: 15px;
+    padding: 10px;
   }
 
   .left-name h1 {
