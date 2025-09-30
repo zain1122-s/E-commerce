@@ -573,7 +573,7 @@
   .signin-container {
     flex-direction: column;
     padding: 10px;
-    min-height: 100vh;
+    height: auto;
     justify-content: center;
   }
 
@@ -583,7 +583,7 @@
 
   .signin-right {
     width: 100%;
-    min-height: 100vh;
+    height: auto;
     justify-content: center;
     align-items: center;
     padding: 15px 0;
@@ -592,6 +592,10 @@
   .right-data {
     width: 95%;
     animation: none; /* Disable sliding animation on mobile */
+  }
+
+  .container {
+    padding: 15px;
   }
 
   .left-name h1 {
