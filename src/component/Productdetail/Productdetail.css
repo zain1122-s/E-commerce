@@ -475,14 +475,33 @@
 
   .left-productdetail {
     padding: 30px;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
     gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .allimage {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .allimage img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .product-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
   }
 
   .product-image img {
-    width: 350px;
+    width: 100%;
     height: auto;
+    max-height: 400px;
   }
 
   .product-content {
@@ -490,27 +509,48 @@
     align-items: center;
     text-align: center;
   }
+}
+
+@media (max-width: 768px) {
+  .details-navbar {
+    justify-content: center;
+    padding: 15px 10px;
+  }
+
+  .details-navbar h1 {
+    font-size: 12px;
+  }
+
+  .product-detail {
+    padding: 15px;
+  }
+
+  .left-productdetail {
+    padding: 20px;
+    flex-direction: row;
+    gap: 15px;
+  }
 
   .allimage {
-    flex-direction: row;
-    gap: 10px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 8px;
   }
 
   .allimage img {
     width: 50px;
     height: 50px;
   }
-}
 
-@media (max-width: 768px) {
-  .details-navbar {
-    justify-content: center;
+  .product-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
   }
 
   .product-image img {
-    width: 250px;
+    width: 100%;
     height: auto;
+    max-height: 300px;
   }
 
   .product-content {
@@ -571,9 +611,37 @@
 }
 
 @media (max-width: 480px) {
+  .left-productdetail {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .allimage {
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .allimage img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .product-image {
+    width: 100%;
+    max-width: 250px;
+  }
+
   .product-image img {
-    width: 200px;
+    width: 100%;
     height: auto;
+    max-height: 250px;
+  }
+
+  .product-content {
+    padding: 15px;
   }
 
   .content-header h1 {
@@ -594,14 +662,6 @@
     font-size: 13px;
   }
 
-  .left-productdetail {
-    padding: 20px;
-  }
-
-  .product-content {
-    padding: 20px;
-  }
-
   .add-to-cart-btn {
     padding: 10px 18px;
     font-size: 13px;
@@ -619,8 +679,8 @@
   }
 
   .pair-images img {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
   }
 
   .product-info {
