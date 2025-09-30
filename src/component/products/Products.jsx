@@ -1,4 +1,4 @@
-  import React, { useState, Suspense } from "react";
+  import React, { useState, useEffect, Suspense } from "react";
   import "./Product.css";
   import { useNavigate } from "react-router-dom";
   import { useWishlist } from "../context/useWishlist";
@@ -19,103 +19,40 @@
     const[limits, setLimits] = useState(8);
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [sortBy, setSortBy] = useState('default');
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
     const navigate=useNavigate();
     const { toggleWishlist, isInWishlist } = useWishlist();
     const { addToCart } = useCart();
     const { searchTerm } = useSearch();
-  // Sample products - in production, fetch from backend API
-  const productcards = [
-    {
-      id: 1,
-      image: shoe1,
-      title: "ZYN Classic Brown",
-      artical: "Article ZYN001",
-      price: "$189",
-      category: "Shoes",
-      new: true,
-      persent: false,
-      description: "Premium leather classic brown shoes with comfortable sole"
-    },
-    {
-      id: 2,
-      image: shoee2,
-      title: "ZYN Sport Elite",
-      artical: "Article ZYN002",
-      price: "$225",
-      category: "Shoes",
-      new: false,
-      persent: true,
-      description: "High-performance athletic shoes for active lifestyle"
-    },
-    {
-      id: 3,
-      image: shoe3,
-      title: "ZYN Urban Style",
-      artical: "Article ZYN003",
-      price: "$165",
-      category: "Shoes",
-      new: false,
-      persent: false,
-      description: "Modern urban design with superior comfort"
-    },
-    {
-      id: 4,
-      image: shoe4,
-      title: "ZYN Professional",
-      artical: "Article ZYN004",
-      price: "$275",
-      category: "Shoes",
-      new: false,
-      persent: true,
-      description: "Elegant professional shoes for business occasions"
-    },
-    {
-      id: 5,
-      image: shoe5,
-      title: "ZYN Casual Comfort",
-      artical: "Article ZYN005",
-      price: "$145",
-      category: "Shoes",
-      new: true,
-      persent: false,
-      description: "Comfortable casual shoes for everyday wear"
-    },
-    {
-      id: 6,
-      image: shoe6,
-      title: "ZYN Adventure",
-      artical: "Article ZYN006",
-      price: "$195",
-      category: "Shoes",
-      new: true,
-      persent: false,
-      description: "Durable outdoor shoes for adventure enthusiasts"
-    },
-    {
-      id: 7,
-      image: shoe7,
-      title: "ZYN Luxury Edition",
-      artical: "Article ZYN007",
-      price: "$320",
-      category: "Shoes",
-      new: false,
-      persent: true,
-      description: "Premium luxury shoes with handcrafted details"
-    },
-    {
-      id: 8,
-      image: shoe8,
-      title: "ZYN Street Walker",
-      artical: "Article ZYN008",
-      price: "$155",
-      category: "Shoes",
-      new: false,
-      persent: false,
-      description: "Stylish street shoes with modern design"
-    }
-  ];
+  
+    useEffect(() => {
+      const fetchProducts = async () => {
+        try {
+          const response = await fetch('http://localhost:5000/api/products');
+          const data = await response.json();
+          const mappedProducts = data.map(product => ({
+            id: product._id,
+            title: product.name,
+            price: `$${product.price}`,
+            category: product.category,
+            image: product.image,
+            description: product.description,
+            artical: `Article ${product._id.slice(-4)}`,
+            new: false, // TODO: add logic
+            persent: false, // TODO: add logic
+          }));
+          setProducts(mappedProducts);
+        } catch (error) {
+          console.error('Error fetching products:', error);
+        } finally {
+          setLoading(false);
+        }
+      };
+      fetchProducts();
+    }, []);
     
-  let filteredProducts = productcards.filter(product =>
+  let filteredProducts = products.filter(product =>
     (product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     product.artical.toLowerCase().includes(searchTerm.toLowerCase())) &&
     (selectedCategory === 'All' || product.category === selectedCategory)
@@ -158,11 +95,13 @@
           </select>
         </div>
         <div className="product-cards">
-          <Suspense fallback={<div className="loading">Loading products...</div>}>
-            {displayProducts.map((item) => (
+          {loading ? (
+            <div className="loading">Loading products...</div>
+          ) : (
+            displayProducts.map((item) => (
               <ProductCard key={item.id} product={item} />
-            ))}
-          </Suspense>
+            ))
+          )}
         </div>
         
           

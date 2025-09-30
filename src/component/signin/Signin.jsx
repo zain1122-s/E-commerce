@@ -11,6 +11,7 @@ const Signin = () => {
   const [isreset, setisreset] = useState(false);
   const [isVerify, setisVerify] = useState(false);
   const [isPassword] = useState(false);
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -35,7 +36,7 @@ const Signin = () => {
       setError('Passwords do not match');
       return;
     }
-    const result = await signup(email, password);
+    const result = await signup(name, email, password);
     if (result.success) {
       navigate("/home");
     } else {
@@ -91,21 +92,29 @@ const Signin = () => {
 
             <form className="form-input">
               {!isreset && (
-                <div className="form-group">
-                  <label>Email</label>
-                  <input type="email" placeholder="johnsondeo@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)} />
-
-                  {forgoten && islogin && (
-                    <button
-                      className="reset"
-                      onClick={() => {
-                        setisreset(true);
-                      }}
-                    >
-                      Reset
-                    </button>
+                <>
+                  {!islogin && (
+                    <div className="form-group">
+                      <label>Name</label>
+                      <input type="text" placeholder="John Doe" value={name} onChange={(e) => setName(e.target.value)} />
+                    </div>
                   )}
-                </div>
+                  <div className="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="johnsondeo@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)} />
+
+                    {forgoten && islogin && (
+                      <button
+                        className="reset"
+                        onClick={() => {
+                          setisreset(true);
+                        }}
+                      >
+                        Reset
+                      </button>
+                    )}
+                  </div>
+                </>
               )}
               {!isPassword && isreset && (
                 <div className="reset-otp">

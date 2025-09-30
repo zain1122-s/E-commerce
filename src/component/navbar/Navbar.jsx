@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { useWishlist } from '../context/useWishlist';
 import { useCart } from '../context/useCart';
 import { useSearch } from '../context/useSearch';
+import { useAuth } from '../context/useAuth';
 
 const Navbar = () => {
   const[menuOpen,setMenuOpen]=useState(false)
@@ -15,6 +16,7 @@ const Navbar = () => {
   const { wishlistItems } = useWishlist();
   const { cartItems } = useCart();
   const { searchTerm, setSearchTerm } = useSearch();
+  const { user, logout } = useAuth();
 
   return (
     <>
@@ -29,6 +31,7 @@ const Navbar = () => {
           <Link to="/home">Home</Link>
           <Link to="/shop">Shop</Link>
           <Link to="/about">About</Link>
+          {user && <Link to="/orders">Orders</Link>}
           <Link to="/cart?contact=true">Contact</Link>
         </div>
          <div className="navbar-icon">
@@ -45,6 +48,11 @@ const Navbar = () => {
               <span className="cart-count">{cartItems.reduce((sum, item) => sum + item.quantity, 0)}</span>
             )}
           </div>
+          {user && (
+            <div className="icon1" onClick={() => { logout(); navigate('/'); }}>
+              Logout
+            </div>
+          )}
          </div>
 
          <div className="menu-button" onClick={()=>setMenuOpen(!menuOpen)}>

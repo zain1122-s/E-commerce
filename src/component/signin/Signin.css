@@ -573,13 +573,8 @@
     padding: 20px 10px;
   }
 
-  .left-name h1 {
-    font-size: 28px;
-    letter-spacing: 2px;
-  }
-
-  .left-name p {
-    font-size: 13px;
+  .left-name {
+    display: none;
   }
 
   .signin-right {
