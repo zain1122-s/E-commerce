@@ -67,7 +67,7 @@ const Wishlist = () => {
                     />
                     <div className="product-details">
                       <h3 onClick={() => handleProductClick(item.id)}>{item.name}</h3>
-                      <p>Product ID: {item.id}</p>
+                      {/* <p>Product ID: {item.id}</p> */}
                     </div>
                   </div>
                   
@@ -80,8 +80,8 @@ const Wishlist = () => {
                       className="add-to-cart-btn"
                       onClick={() => handleAddToCart(item)}
                     >
-                      <ShoppingCart size={16} />
-                      Add to Cart
+                      <ShoppingCart size={1} />
+                      add to cart
                     </button>
                     <button 
                       className="remove-btn"

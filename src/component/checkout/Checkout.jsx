@@ -49,7 +49,8 @@ const CheckoutForm = () => {
 
   return (
     <div className="checkout-container">
-      <h1>Checkout</h1>
+
+  <h1>Checkout</h1>
       {step === 1 && (
         <div className="checkout-step">
           <h2>Shipping Information</h2>
@@ -61,9 +62,11 @@ const CheckoutForm = () => {
             <input type="text" name="city" placeholder="City" onChange={handleInputChange} />
             <input type="text" name="zipCode" placeholder="Zip Code" onChange={handleInputChange} />
           </form>
-          <button onClick={nextStep}>Next</button>
+          <button onClick={nextStep} className='p-btn1'>Next</button>
         </div>
       )}
+    
+    
       {step === 2 && (
         <div className="checkout-step">
           <h2>Payment Information</h2>
@@ -73,11 +76,11 @@ const CheckoutForm = () => {
           </select>
           {formData.paymentMethod === 'card' && (
             <div className="card-element">
-              <CardElement />
+              <CardElement  />
             </div>
           )}
-          <button onClick={prevStep}>Back</button>
-          <button onClick={nextStep}>Next</button>
+          <button onClick={prevStep} className='b-btn'>Back</button>
+          <button onClick={nextStep} className='n-btn'>Next</button>
         </div>
       )}
       {step === 3 && (
@@ -85,7 +88,7 @@ const CheckoutForm = () => {
           <h2>Review Order</h2>
           <p>Review your order details here.</p>
           <button onClick={prevStep}>Back</button>
-          <button onClick={handleSubmit}>Place Order</button>
+          <button onClick={handleSubmit} >Place Order</button>
         </div>
       )}
     </div>
