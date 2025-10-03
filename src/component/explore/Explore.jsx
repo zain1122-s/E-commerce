@@ -75,7 +75,7 @@ const Explore = () => {
               {explorecards[activeIndex].subtitle}
             </span>
             <h2>{explorecards[activeIndex].title}</h2>
-            <button className="arrow-btn">→</button>
+            <button className="arrow-btn" onClick={nextSlide}>→</button>
           </div>
         </div>
 

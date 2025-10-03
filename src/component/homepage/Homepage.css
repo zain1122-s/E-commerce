@@ -159,6 +159,7 @@
 
     .homepage-card button {
         font-size: clamp(12px, 2vw, 16px);
+        margin-left: 100px;
     }
 }
 

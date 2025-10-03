@@ -97,7 +97,8 @@
   }
 
   .categories-grid {
-    grid-template-columns: 1fr;
+    /* grid-template-row: 1fr; */
+    display: flex;
   }
 
   .category-card img {

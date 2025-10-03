@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Homepage.css";
 import Brand from "../brand/brand";
 import Categories from "../categories/Categories";
+import Features from "../features/Features";
 import Products from "../products/Products";
 import Explore from "../../component/explore/Explore"
 import Testimonials from "../testimonials/Testimonials";
@@ -29,7 +30,8 @@ const Homepage = () => {
       </div>
       <Brand/>
       <Categories/>
-      {/* <Products/> */}
+      <Features/>
+      <Products/>
       <Explore/>
       <Testimonials/>
       <Newsletter/>
