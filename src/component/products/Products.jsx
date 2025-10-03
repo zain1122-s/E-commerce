@@ -38,7 +38,7 @@
             category: product.category,
             image: product.image,
             description: product.description,
-            artical: `Article ${product._id.slice(-4)}`,
+            article: `Article ${product._id.slice(-4)}`,
             new: false, // TODO: add logic
             persent: false, // TODO: add logic
           }));
@@ -54,7 +54,7 @@
     
   let filteredProducts = products.filter(product =>
     (product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    product.artical.toLowerCase().includes(searchTerm.toLowerCase())) &&
+    product.article.toLowerCase().includes(searchTerm.toLowerCase())) &&
     (selectedCategory === 'All' || product.category === selectedCategory)
   );
 
@@ -80,7 +80,7 @@
 
   return (
       <div className="Product-container">
-        <h1>Our Products</h1>
+        <h1>Featured Products</h1>
         <div className="filters">
           <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
             <option value="All">All Categories</option>

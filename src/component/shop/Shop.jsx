@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Shop.css";
 import { Share2, GitCompare, Heart, ShoppingCart } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { useWishlist } from "../context/useWishlist";
 import { useCart } from "../context/useCart";
 import { useSearch } from "../context/useSearch";
@@ -15,11 +15,19 @@ const Shop = () => {
   const [selectedSize, setSelectedSize] = useState('');
   const [priceRange, setPriceRange] = useState([0, 500]);
   const [productType, setProductType] = useState('shoes');
+  const [searchParams] = useSearchParams();
 
   const navigate = useNavigate();
   const { toggleWishlist, isInWishlist } = useWishlist();
   const { addToCart } = useCart();
   const { searchTerm } = useSearch();
+
+  useEffect(() => {
+    const type = searchParams.get('type');
+    if (type && (type === 'shoes' || type === 'pants')) {
+      setProductType(type);
+    }
+  }, [searchParams]);
 
   const currentCollection = productType === 'shoes' ? shoeCollection : pantCollection;
   const shoeSizes = ['6', '7', '8', '9', '10', '11', '12'];

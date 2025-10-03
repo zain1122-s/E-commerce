@@ -1,26 +1,38 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Homepage.css";
 import Brand from "../brand/brand";
+import Categories from "../categories/Categories";
 import Products from "../products/Products";
 import Explore from "../../component/explore/Explore"
+import Testimonials from "../testimonials/Testimonials";
+import Newsletter from "../newsletter/Newsletter";
 import Footer from "../footer/Footer";
 
 const Homepage = () => {
+  const navigate = useNavigate();
+
+  const handleBuyNow = () => {
+    navigate('/shop');
+  };
+
   return (
     <div className="homepage-container">
 
- 
       <div className="homepage-content">
         <div className="homepage-card">
-          <p>New Arrival</p>
-          <h1>Welcome to <br /> Devich!</h1>
-          <p>we've moved into our new building in Hittisau. <br />You can find us between hittisau and krumbach.</p>
-           <button>Buy Now</button>
+          <p>Discover the Latest Trends</p>
+          <h1>Step into Style with <br /> Devich Clothing</h1>
+          <p>Explore our exclusive collection of shoes and pants. <br />Quality fashion for every occasion.</p>
+          <button onClick={handleBuyNow}>Shop Now</button>
         </div>
       </div>
       <Brand/>
-      <Products/>
+      <Categories/>
+      {/* <Products/> */}
       <Explore/>
+      <Testimonials/>
+      <Newsletter/>
       <Footer/>
     </div>
   );

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./explore.css";
 
 import shoe5 from "../../assets/zynshoes/shoe5.jpg";
@@ -35,6 +36,7 @@ const explorecards = [
 
 const Explore = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const navigate = useNavigate();
 
   const nextSlide = () => {
     setActiveIndex((prev) => (prev + 1) % explorecards.length);
@@ -51,13 +53,13 @@ const Explore = () => {
       {/* Left section */}
       <div className="explore-left">
         <h1>
-          Walk the Earth in <br /> Authentic Wood- <br /> Inspired Footwear
+          Discover Our <br /> Unique Fashion <br /> Collection
         </h1>
         <p>
-          Our designer already made a lot of beautiful <br />
-          prototypes of rooms that inspire you.
+          Explore our handcrafted designs that blend <br />
+          style, comfort, and innovation for every occasion.
         </p>
-        <button>Explore More</button>
+        <button onClick={() => navigate('/shop')}>Explore More</button>
       </div>
 
       {/* Right section (Slider) */}
