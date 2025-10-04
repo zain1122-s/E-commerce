@@ -22,6 +22,8 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/devich-cl
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/products', require('./routes/products'));
 app.use('/api/orders', require('./routes/orders'));
+app.use('/api/users', require('./routes/users'));
+app.use('/api/analytics', require('./routes/analytics'));
 app.use('/api/payment', require('./routes/payment'));
 
 app.get('/', (req, res) => {

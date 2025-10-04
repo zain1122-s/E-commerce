@@ -15,6 +15,7 @@ import About from "./component/aboutus/About";
 import Wishlist from "./component/wishlist/Wishlist";
 import Checkout from "./component/checkout/Checkout";
 import OrderHistory from "./component/orders/OrderHistory";
+import Admin from "./component/admin/Admin";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
                 <Route path="/orders" element={<Layout><OrderHistory /></Layout>} />
                 <Route path="/about" element={<Layout><About /></Layout>} />
                 <Route path="/wishlist" element={<Layout><Wishlist /></Layout>} />
+                <Route path="/admin" element={<Admin />} />
               </Routes>
             </div>
           </WishlistProvider>

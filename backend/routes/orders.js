@@ -1,6 +1,6 @@
 const express = require('express');
 const Order = require('../models/Order');
-const auth = require('../middleware/auth');
+const { auth, admin } = require('../middleware/auth');
 
 const router = express.Router();
 
@@ -47,8 +47,18 @@ router.get('/:id', auth, async (req, res) => {
   }
 });
 
+// Get all orders (admin only)
+router.get('/admin/all', auth, admin, async (req, res) => {
+  try {
+    const orders = await Order.find().populate('user', 'name email').populate('items.product');
+    res.json(orders);
+  } catch (err) {
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
 // Update order status (admin only)
-router.put('/:id', auth, async (req, res) => {
+router.put('/:id', auth, admin, async (req, res) => {
   try {
     const order = await Order.findByIdAndUpdate(req.params.id, req.body, { new: true });
     if (!order) {

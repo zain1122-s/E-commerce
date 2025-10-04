@@ -32,6 +32,7 @@ const Navbar = () => {
           <Link to="/shop">Shop</Link>
           <Link to="/about">About</Link>
           {user && <Link to="/orders">Orders</Link>}
+          {user?.role === 'admin' && <Link to="/admin">Admin</Link>}
           <Link to="/cart?contact=true">Contact</Link>
         </div>
          <div className="navbar-icon">
